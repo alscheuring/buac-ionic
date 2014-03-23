@@ -2,12 +2,21 @@
 <widget id="org.brewingupacure.buacmobile" version="2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Brewing Up A Cure</name>
     <description>
-        Brewing Up A Cure
+       Mobile app for displaying BUAC brewers and other relevant information.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="al.scheuring@gmail.com" href="http://rivers3.com">
+        BUAC Team
     </author>
     <feature name="http://api.phonegap.com/1.0/device" />
+	
+    <gap:plugin name="com.pushwoosh.plugins.pushwoosh" />
+	<gap:plugin name="net.tunts.webintent" />
+    <!--
+        Enable individual API permissions here.
+        The "device" permission is required for the 'deviceready' event.
+    -->
+    <gap:plugin name="org.apache.cordova.device" />
+    	<content src="index.html" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -21,7 +30,7 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="7" />
+    <preference name="android-minSdkVersion" value="11" />
     <preference name="android-installLocation" value="auto" />
     <icon src="icon.png" />
     <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
@@ -47,5 +56,6 @@
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <access origin="http://127.0.0.1*" />
+    <access origin="*" />
+
 </widget>
